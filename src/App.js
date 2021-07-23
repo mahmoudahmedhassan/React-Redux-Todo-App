@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+// import the component
+import TodoInput from "./Componets/TodoInput";
+import ListIitems from "./Componets/ListIitems.js";
+
+// import animation library framer 
+import { motion } from "framer-motion";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <motion.h1
+        className="todo_app"
+        initial={{ y: -200 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", duration: 1 }}
+        whileHover={{ scale: 1.2 }}
+      >
+        Todo App
+      </motion.h1>
+
+      <motion.div
+        initial={{ y: 1000 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", duration: 1 }}
+      >
+        <TodoInput />
+        <ListIitems />
+
+      </motion.div>
     </div>
   );
 }

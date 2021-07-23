@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+ 
+/* main commponet app  */
+ body{
+     background-color: #6882A0
+ }
+.App{
+     height: 100hv;
+ }
+.todo_app{
+     text-align:center;
+     margin: 20px;
+     font-family: 'Otomanopee One', sans-serif;
+     color: #fff;
+ }
+ 
+ /* ListIitems commponet */
+.buts .active{
+    background-color:green;
+    color:#fff;
 }
+.buts .active:hover{
+    background-color: green;
+    transition: all .3s ease-in;
+ }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+ /* todo input commponet */
+ .form{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 11px;
+ }
+ .form_textfield{
+     width:90% ;
+ }
+
+ .form_button{
+      width:100px;
+     border: none;
+    background: transparent;
+
+ }
+ .form_icon{
+     font-size:40px;
+      cursor: pointer;
+ } 
+
+ .buts{
+     display: flex;
+     justify-content: center;
+     margin-top: 30px;
+     margin-bottom: 30px;
+ }
+ .buts button{
+     margin-left: 20px;
+ }
+
+ /* items commponet */
+ .items{
+     text-align: center;
+     margin-top:50px;
+ }
+ .item{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    background:#fff
+  
+  }
+  .item p{
+      background-color: cornsilk;
+      padding: 10px;
+      width:50%;
+      overflow-wrap: break-word;
+      text-align: start;
+      
+  }
+  .item button{
+      margin-left: 20px;
+  }
+
+
+  /* media query  */
+  @media (max-width: 576px) { 
+       .form{
+        width: 90%;
+        padding: 10px;
+        margin: auto;
+      }
+      .items{
+          width:90%;
+          margin: auto;
+      }
+      .item{
+          width:90%;
+          display: flex;
+          flex-flow: column;
+
+      }
+      .item p{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .item .item_button{
+          display: flex;
+      }
+
+   }
+
+
