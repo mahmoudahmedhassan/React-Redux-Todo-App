@@ -21,7 +21,7 @@ function TodoInput({addItem}) {
   const handelSubmit =(e)=>{
     e.preventDefault();
 
-     if(value == ''){
+     if(value === ''){
          alert("Input is Empty") 
      }else{
         addItem({id:uuidv4(), text:value,complete:false});

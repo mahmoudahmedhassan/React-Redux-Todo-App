@@ -115,6 +115,9 @@
       .item .item_button{
           display: flex;
       }
+      .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+          margin-bottom: 7px !important;
+      }
 
    }
 
