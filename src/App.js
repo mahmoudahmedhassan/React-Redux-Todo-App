@@ -1,5 +1,4 @@
 import "./App.css";
-
 // import the component
 import TodoInput from "./Componets/TodoInput";
 import ListIitems from "./Componets/ListIitems.js";
@@ -8,10 +7,10 @@ import ListIitems from "./Componets/ListIitems.js";
 import { motion } from "framer-motion";
 
 function App() {
-
+ 
   return (
     <div className="App">
-      
+       
       <motion.h1
         className="todo_app"
         initial={{ y: -200 }}

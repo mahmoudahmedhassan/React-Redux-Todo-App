@@ -34,8 +34,7 @@
     margin: auto;
     background: #fff;
     padding: 20px;
-    border-radius: 11px;
- }
+  }
  .form_textfield{
      width:90% ;
  }
@@ -49,6 +48,7 @@
  .form_icon{
      font-size:40px;
       cursor: pointer;
+      color:#6882A0;
  } 
 
  .buts{
@@ -79,11 +79,13 @@
   
   }
   .item p{
-      background-color: cornsilk;
+      background-color: #6882A0;
       padding: 10px;
       width:50%;
       overflow-wrap: break-word;
       text-align: start;
+      color: #fff;
+      text-transform:capitalize;
       
   }
   .item button{

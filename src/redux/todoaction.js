@@ -31,12 +31,11 @@ export const updateItem =(itemID,text)=>{
     }
 }
 
-export const completeItem =(itemID,complete)=>{
+export const completeItem =(itemID)=>{
     return{
         type :COMPLETE_ITEMS,
          payload:{
             id:itemID,
-            complete
         }  
     }
 }

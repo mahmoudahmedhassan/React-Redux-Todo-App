@@ -15,7 +15,7 @@ function TodoInput({addItem}) {
   const [value, setValue] = useState("");
 
   const onhandlerChenge =(e)=>{
-    setValue(e.target.value)
+    setValue(e.target.value);
   }
 
   const handelSubmit =(e)=>{
@@ -35,7 +35,7 @@ function TodoInput({addItem}) {
       <form noValidate autoComplete="off" className="form" onSubmit={handelSubmit}>
         <TextField
           id="outlined-basic"
-          label="Outlined"
+          label="Text Your Notes"
           variant="outlined"
           className="form_textfield"
           onChange={onhandlerChenge}

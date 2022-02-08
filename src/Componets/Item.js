@@ -15,7 +15,7 @@ import { BsCheckAll } from "react-icons/bs";
 function Item({ todo, deleteItem, updateItem, completeItem }) {
 
   const [editEle, updateEditEle] = useState(false);
-  const [value, updateValue] = useState("");
+  const [value, updateValue] = useState(todo.text);
 
   const handelChange = (e) => {
     updateValue(e.target.value);
@@ -23,13 +23,13 @@ function Item({ todo, deleteItem, updateItem, completeItem }) {
 
   const handelEdit = () => {
     updateEditEle(!editEle);
-    updateItem({ id: todo.id, text: value });
-    updateValue("");
-  };
+    updateItem({ id: todo.id, text:value });
+   };
 
   const items = (
     <>
-      {editEle ? (
+      {
+      editEle ? (
         <TextField
           label="Helper text"
           value={value}
@@ -55,14 +55,14 @@ function Item({ todo, deleteItem, updateItem, completeItem }) {
           <AiFillDelete title="delete"/>
         </Button>
 
-        <Button
+         <Button
           variant="contained"
           color="yollwo"
-          onClick={() => completeItem({ id:todo.id })}
+          onClick={() => completeItem({ id:todo.id },todo.complete===false)}
         >
           <BsCheckAll title="completed"/>
         </Button>
-        
+         
       </div>
     </>
   );
@@ -96,7 +96,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     deleteItem: (id) => dispatch(deleteItem(id)),
     updateItem: ({ id, text }) => dispatch(updateItem(id, text)),
-    completeItem: ({ id,complete }) => dispatch(completeItem(id,complete)),
+    completeItem: ({ id }) => dispatch(completeItem(id)),
   };
 };
 export default connect(null, mapDispatchToProps)(Item);

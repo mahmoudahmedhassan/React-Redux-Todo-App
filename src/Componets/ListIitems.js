@@ -44,7 +44,6 @@ function ListIitems() {
 
        <AnimatePresence>
 
-
           {/* active tap */}
 
         {todos.todoList.length > 0 && sort === "active"
@@ -64,6 +63,8 @@ function ListIitems() {
               );
             })
           : null}
+
+          
 
         {/* all taps  */}
 

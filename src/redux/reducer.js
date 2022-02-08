@@ -12,41 +12,25 @@ const reducer = (state = INITIAL_STATE, action) => {
       newTodos = [...state, action.payload];
       return newTodos;
 
-   //Remove todos
+//Remove todos
 
     case DELETE_ITEMS:
-      newTodos = [...state];
+      // newTodos = [...state];
       newTodos = state.filter((el) => el.id !== action.payload);
       return newTodos;
 
-       //Update todos
+//Update todos
 
        case UPDATA_ITEMS:
-        newTodos = state;
+        // newTodos = state;
          newTodos =state.map(todo => ( todo.id === action.payload.id ? {...todo , text:action.payload.text } :todo));
           return newTodos;
 
-        // return state.map(todo =>{
-        //   if(todo.id===action.payload.id){
-        //     console.log(action.payload)
-        //     return{
-        //       ...todo,
-        //       text:action.payload.text,
-      
-        //     };
-        //   }
-        //   return todo;
-
-        // }) 
-
-
-    //completed
+//completed
         case COMPLETE_ITEMS:
-          newTodos = state;
-          state.map(todo => (todo.id === action.payload ? {...todo, complete:true } :todo))
-          console.log(action.payload)
-          return newTodos;
-  
+           newTodos =state.map(todo => (todo.id === action.payload ? {...todo, complete:true } :todo))
+           return newTodos;
+
     default:
       return state;
   }
