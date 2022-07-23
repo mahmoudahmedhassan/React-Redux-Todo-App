@@ -15,6 +15,7 @@ import { BsCheckAll } from "react-icons/bs";
 function Item({ todo, deleteItem, updateItem, completeItem }) {
 
   const [editEle, updateEditEle] = useState(false);
+  
   const [value, updateValue] = useState(todo.text);
 
   const handelChange = (e) => {
@@ -44,7 +45,7 @@ function Item({ todo, deleteItem, updateItem, completeItem }) {
       <div className='item_button'>
 
         <Button variant="contained" color="primary" onClick={handelEdit}>
-          {editEle ? <GrUpdate title="update"/> : <FaEdit title="edit"/>}
+          {editEle ? <GrUpdate title="update" style={{color:'#fff'}}/> : <FaEdit title="edit"/>}
         </Button>
 
         <Button
@@ -58,7 +59,7 @@ function Item({ todo, deleteItem, updateItem, completeItem }) {
          <Button
           variant="contained"
           color="yollwo"
-          onClick={() => completeItem({ id:todo.id },todo.complete===false)}
+          onClick={() => completeItem({ id:todo.id } )}
         >
           <BsCheckAll title="completed"/>
         </Button>

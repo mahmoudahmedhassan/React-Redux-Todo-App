@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 // His library generates a random ids
 import { v4 as uuidv4 } from 'uuid';
 
-
 function TodoInput({addItem}) {
  
   const [value, setValue] = useState("");
@@ -52,9 +51,7 @@ function TodoInput({addItem}) {
      </div>
   );
 }
-
  
-
 const mapDispatchToProps = (dispatch) => {
   return {
     addItem: (id,text,complete) => dispatch(addItem(id,text,complete)),

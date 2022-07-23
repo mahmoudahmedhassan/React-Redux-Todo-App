@@ -15,22 +15,20 @@ const reducer = (state = INITIAL_STATE, action) => {
 //Remove todos
 
     case DELETE_ITEMS:
-      // newTodos = [...state];
-      newTodos = state.filter((el) => el.id !== action.payload);
+       newTodos = state.filter((el) => el.id !== action.payload);
       return newTodos;
 
 //Update todos
 
        case UPDATA_ITEMS:
-        // newTodos = state;
-         newTodos =state.map(todo => ( todo.id === action.payload.id ? {...todo , text:action.payload.text } :todo));
+          newTodos =state.map(todo => ( todo.id === action.payload.id ? {...todo , text:action.payload.text } :todo));
           return newTodos;
 
 //completed
         case COMPLETE_ITEMS:
            newTodos =state.map(todo => (todo.id === action.payload ? {...todo, complete:true } :todo))
            return newTodos;
-
+ 
     default:
       return state;
   }

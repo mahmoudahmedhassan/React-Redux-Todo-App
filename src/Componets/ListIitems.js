@@ -64,8 +64,6 @@ function ListIitems() {
             })
           : null}
 
-          
-
         {/* all taps  */}
 
         {todos.todoList.length > 0 && sort === "all"
